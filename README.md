@@ -1,2 +1,2 @@
-# GLAB
+# GAZZ LAB
 Gazzarrini Lab portfolio
