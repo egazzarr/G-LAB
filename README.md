@@ -1,2 +1,2 @@
 # GAZZ LAB
-Gazzarrini Lab portfolio
+Gazzarrini Lab portfolio. Get in touch!
