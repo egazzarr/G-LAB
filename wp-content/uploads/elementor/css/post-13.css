@@ -45,16 +45,67 @@
 }
 
 .elementor-13 .elementor-element.elementor-element-380673e:not(.elementor-motion-effects-element-type-background),
-.elementor-13 .elementor-element.elementor-element-380673e>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-    background-image: url("../../../../wp-images/beehive.jpg");
-    background-position: center center;
-    background-size: cover;
-}
 
 .elementor-13 .elementor-element.elementor-element-380673e {
-    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.5);
-    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    background: none !important; /* Removes any background image */
 }
+
+
+
+/* Remove background properties in case of other inherited styles */
+.qodef-backgound-letter-holder-no {
+    background: none !important;
+}
+
+
+.elementor-13 .elementor-element.elementor-element-380673e video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure the video takes up the full width */
+    height: 100%; /* Ensure the video takes up the full height */
+    object-fit: contain; /* Ensures the whole video is visible and fits without stretching */
+    max-width: 100%; /* Prevent the video from exceeding the section's width */
+    max-height: 100%; /* Prevent the video from exceeding the section's height */
+}
+
+
+/* Text overlay */
+.overlay-text {
+    position: fixed;
+    top: 5%;               /* Padding from the top */
+    left: 5%;              /* Padding from the left */
+    color: rgb(0, 0, 0);
+    font-family: Arial, sans-serif;
+    font-size: 1.5vw;     /* Responsive font size */
+    text-align: left;
+    z-index: 1;
+}
+
+/* Style the heading and paragraphs */
+.overlay-text h1 {
+    margin: 0;
+    font-size: 2.5vw;
+   
+    line-height: 1.2;
+}
+
+.overlay-text p {
+    margin: 10px 0 0;
+    font-size: 1.2vw;
+    line-height: 1.5;
+}
+
+/* Make sure the container takes up the full space */
+.elementor-container {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+
 
 .elementor-13 .elementor-element.elementor-element-380673e>.elementor-background-overlay {
     transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
@@ -80,7 +131,7 @@
 .elementor-13 .elementor-element.elementor-element-154faed8:not(.elementor-motion-effects-element-type-background),
 .elementor-13 .elementor-element.elementor-element-154faed8>.elementor-motion-effects-container>.elementor-motion-effects-layer {
     background-color: transparent;
-    background-image: linear-gradient(180deg, #FCFF5F 0%, #29BEF200 100%);
+    background-image: linear-gradient(180deg, #ff2693 0%, #29BEF200 100%);
 }
 
 .elementor-13 .elementor-element.elementor-element-154faed8>.elementor-background-overlay {
@@ -115,6 +166,34 @@
     --spacer-size: 50px;
 }
 
+.vertical-footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 5px;
+    
+    z-index: 999; /* Ensure it stays on top */
+    font-size: clamp(0.4rem, 1vw, 0.7rem); 
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Let clicks go through the canvas */
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+    .vertical-footer {
+        padding: 3px;
+        font-size: 0.5rem; /* Smaller font on smaller screens */
+    }
+}
+
+
 @media(max-width:1024px) and (min-width:768px) {
     .elementor-13 .elementor-element.elementor-element-85ccd92 {
         width: 100%;
@@ -138,7 +217,25 @@
     }
     .elementor-13 .elementor-element.elementor-element-380673e:not(.elementor-motion-effects-element-type-background),
     .elementor-13 .elementor-element.elementor-element-380673e>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-        background-image: url("../../../../wp-images/beehive.jpg");
+        /* Remove image reference */
+        background-image: none;
+    }
+    
+    .elementor-13 .elementor-element.elementor-element-380673e {
+        
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .elementor-13 .elementor-element.elementor-element-380673e video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; /* Ensure the video takes up the full width */
+        height: 100%; /* Ensure the video takes up the full height */
+        object-fit: contain; /* Ensures the whole video is visible and fits without stretching */
+        max-width: 100%; /* Prevent the video from exceeding the section's width */
+        max-height: 100%; /* Prevent the video from exceeding the section's height */
     }
     .elementor-bc-flex-widget .elementor-13 .elementor-element.elementor-element-28b0858.elementor-column .elementor-widget-wrap {
         align-items: center;
@@ -167,6 +264,23 @@
     }
     .elementor-13 .elementor-element.elementor-element-380673e:not(.elementor-motion-effects-element-type-background),
     .elementor-13 .elementor-element.elementor-element-380673e>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-        background-image: url("../../../../wp-images/beehive.jpg");
+    /* Remove image reference */
+    background-image: none;
+    }
+
+    .elementor-13 .elementor-element.elementor-element-380673e {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .elementor-13 .elementor-element.elementor-element-380673e video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; /* Ensure the video takes up the full width */
+        height: 100%; /* Ensure the video takes up the full height */
+        object-fit: contain; /* Ensures the whole video is visible and fits without stretching */
+        max-width: 100%; /* Prevent the video from exceeding the section's width */
+        max-height: 100%; /* Prevent the video from exceeding the section's height */
     }
 }
