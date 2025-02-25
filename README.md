@@ -1,2 +1,2 @@
 # GAZZARRINI LAB
-Gazzarrini Lab portfolio. Get in touch!
+Gazzarrini Lab [portfolio](https://egazzarr.github.io/G-LAB/). Get in touch!
