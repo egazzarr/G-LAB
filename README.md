@@ -1,6 +1,7 @@
 # Gazzarrini Lab
+
 Digital Scientific Communication studio based in Geneva, founded in 2024. 
 
-Visit the [portfolio](https://egazzarr.github.io/G-LAB/) and get in touch!¨
+Visit the [portfolio](https://egazzarr.github.io/G-LAB/) and get in touch!
 
-Previous clients include: CERN, PolarQuest, GitHub. 
+Previous clients include: [CERN](https://home.cern/), [PolarQuest](https://www.polarquest.org/), [GitHub](https://github.com/). 
