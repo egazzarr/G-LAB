@@ -1030,6 +1030,55 @@
             }
         }
 
+        /* Responsive navigation fix */
+        .qodef-header--tabbed #qodef-page-header .qodef-tabbed-header-wrapper {
+            width: 100%;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        .qodef-header--tabbed #qodef-page-header .qodef-tabbed-header-wrapper .qodef-header-logo-link {
+            flex: 0 1 auto;
+            min-width: 0;
+            white-space: nowrap;
+        }
+
+        .qodef-header--tabbed #qodef-page-header .qodef-tabbed-header-wrapper .qodef-header-navigation {
+            flex: 1 1 auto;
+            min-width: 0;
+        }
+
+        .qodef-header--tabbed #qodef-page-header .qodef-tabbed-header-wrapper .qodef-header-navigation>ul {
+            display: flex;
+            width: 100%;
+        }
+
+        .qodef-header--tabbed #qodef-page-header .qodef-tabbed-header-wrapper .qodef-header-navigation>ul>li {
+            flex: 1 1 0;
+            min-width: 0;
+        }
+
+        .qodef-header--tabbed #qodef-page-header .qodef-tabbed-header-wrapper .qodef-header-navigation>ul>li>a {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding: 0 10px;
+        }
+
+        /* Ensure proper sizing on all screen sizes */
+        @media (max-width: 1024px) {
+            .qodef-header--tabbed #qodef-page-header .qodef-tabbed-header-wrapper .qodef-header-navigation>ul>li>a {
+                padding: 0 8px;
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .qodef-header--tabbed #qodef-page-header .qodef-tabbed-header-wrapper .qodef-header-navigation>ul>li>a {
+                padding: 0 5px;
+                font-size: 0.85em;
+            }
+        }
        
     </style>
 </head>
