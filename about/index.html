@@ -949,6 +949,102 @@
             color: #000000;
         }
 
+        /* Fix for independent scrolling columns */
+        
+        /* Disable the buggy JavaScript sticky behavior */
+        .qodef-portfolio-info-holder {
+            position: relative !important;
+            transform: none !important;
+            top: auto !important;
+            left: auto !important;
+            bottom: auto !important;
+            transition: none !important;
+        }
+
+        /* Make the content area a flex container with fixed columns */
+        .qodef-portfolio-single.qodef-layout--split-screen .qodef-e-content {
+            display: flex;
+            position: fixed !important;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Left column - independently scrollable */
+        .qodef-portfolio-single.qodef-layout--split-screen .qodef-e-content-inner {
+            flex: 0 0 50%;
+            height: 100vh;
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: relative !important;
+            /* Smooth scrolling */
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /* Right column - independently scrollable */
+        .qodef-portfolio-single.qodef-layout--split-screen .elementor-column {
+            flex: 0 0 50%;
+            height: 100vh;
+            overflow-y: auto;
+            overflow-x: hidden;
+            /* Smooth scrolling */
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /* Add padding to left column content */
+        .qodef-portfolio-info-holder {
+            padding: 115px 28px !important;
+            min-height: 100%;
+        }
+
+        /* Hide scrollbar for left column */
+        .qodef-e-content-inner {
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE and Edge */
+        }
+
+        .qodef-e-content-inner::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
+        }
+
+        /* Custom scrollbar styling for right column only */
+        .elementor-column::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .elementor-column::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .elementor-column::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+
+        .elementor-column::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        /* Adjust for mobile */
+        @media only screen and (max-width: 768px) {
+            .qodef-portfolio-single.qodef-layout--split-screen .qodef-e-content {
+                position: relative !important;
+                flex-direction: column;
+                height: auto;
+            }
+            
+            .qodef-portfolio-single.qodef-layout--split-screen .qodef-e-content-inner,
+            .qodef-portfolio-single.qodef-layout--split-screen .elementor-column {
+                flex: 0 0 100%;
+                height: auto;
+                overflow-y: visible;
+            }
+        }
+
         #qodef-single-portfolio-navigation .qodef-m-nav a .qodef-m-nav-label {
             color: #000000;
         }
@@ -1222,7 +1318,6 @@
     </script>
     <link rel='stylesheet' id='rs-plugin-settings-css' href='../wp-content/plugins/revslider/public/assets/css/rs6.css?ver=6.5.8' type='text/css' media='all' />
     <style id='rs-plugin-settings-inline-css' type='text/css'>
-        #rs-demo-id {}
     </style>
     <script type="text/javascript" src="../wp-includes/js/hoverIntent.min.js?ver=1.10.2" id="hoverIntent-js"></script>
     <script type="text/javascript" src="../wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
