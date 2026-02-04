@@ -1588,10 +1588,18 @@
 
 <!-- Add the p5.js sketch -->
 <script>
-   function setup() {
-//   createCanvas(windowWidth, windowHeight);
-  createCanvas(1920, 1080);  // Ensure the canvas covers the entire window
+
+function setup() {
+
+  // full window canvas
+  createCanvas(windowWidth, windowHeight)
+
 }
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
 
 function draw() {
   // Set the fill to a semi-transparent pink
